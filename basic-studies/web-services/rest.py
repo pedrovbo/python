@@ -9,5 +9,5 @@ def consulta():
     # print(tip['advice'])
 
 
-consulta();
+consulta()
 
