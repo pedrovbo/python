@@ -17,4 +17,4 @@ for i in file_list:
     im1.save(fr'{arquivoDestino}')
     contador = contador + 1
 
-print("Fim do Programa")
+print("Arquivos convertidos com sucesso")
