@@ -1,6 +1,6 @@
 import sqlite3 as conector
 from modelo import Pessoa
-from script19_4 import recuperar_veiculos
+from select_all_veiculo_join_marca_query_parameter import recuperar_veiculos
 
 # Abertura de conexão e aquisição de cursor
 conexao = conector.connect("./meu_banco.db")

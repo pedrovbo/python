@@ -2,7 +2,7 @@ import sqlite3 as conector
 
 
 comando = """
-DROP TABLE Marca;
+COMANDO SQL DESEJADO;
 """
 # Abertura de conexão
 conexao = conector.connect("meu_banco.db")
