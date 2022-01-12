@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 import pandas as pd
 from openpyxl.workbook import Workbook
-
+# TODO: trocar o pandas pelo openpyxl, pandas com problemas para interagir com planilhas xlsx
 
 class PrincipalRAD:
     def __init__(self, win):
