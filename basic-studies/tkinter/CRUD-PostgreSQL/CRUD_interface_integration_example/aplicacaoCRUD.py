@@ -1,5 +1,12 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Sep 12 19:43:22 2020
+
+@author: smonteiro
+"""
+
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk, CENTER, RIGHT
 import crud as crud
 
 
@@ -32,13 +39,15 @@ class PrincipalBD:
 
         self.treeProdutos.configure(yscrollcommand=self.verscrlbar.set)
 
+        self.treeProdutos.heading('#0', text='', anchor=CENTER)
         self.treeProdutos.heading("Código", text="Código")
         self.treeProdutos.heading("Nome", text="Nome")
         self.treeProdutos.heading("Preço", text="Preço")
 
-        self.treeProdutos.column("Código", minwidth=0, width=100)
-        self.treeProdutos.column("Nome", minwidth=0, width=100)
-        self.treeProdutos.column("Preço", minwidth=0, width=100)
+        self.treeProdutos.column('#0', width=0, anchor=CENTER, stretch=False)
+        self.treeProdutos.column("Código", minwidth=0, width=170, anchor="e")
+        self.treeProdutos.column("Nome", minwidth=0, width=170, anchor="e")
+        self.treeProdutos.column("Preço",  minwidth=0, width=165, anchor="e")
 
         self.treeProdutos.pack(padx=10, pady=10)
 
@@ -90,13 +99,14 @@ class PrincipalBD:
                 print("Nome = ", nome)
                 print("Preço  = ", preco, "\n")
 
-                self.treeProdutos.insert('', 'end',
+                self.treeProdutos.insert(parent='', index=self.id,
                                          iid=self.iid,
                                          values=(codigo,
                                                  nome,
                                                  preco))
                 self.iid = self.iid + 1
                 self.id = self.id + 1
+
             print('Dados da Base')
         except:
             print('Ainda não existem dados para carregar')
