@@ -17,7 +17,6 @@ class PrincipalBD:
         self.lbCodigo = tk.Label(win, text='Código do Produto:')
         self.lblNome = tk.Label(win, text='Nome do Produto')
         self.lblPreco = tk.Label(win, text='Preço')
-
         self.txtCodigo = tk.Entry(bd=3)
         self.txtNome = tk.Entry()
         self.txtPreco = tk.Entry()
@@ -200,7 +199,7 @@ class PrincipalBD:
 janela = tk.Tk()
 principal = PrincipalBD(janela)
 janela.title('Bem Vindo a Aplicação de Banco de Dados')
-janela.geometry("720x600+10+10")
+janela.geometry("700x600+10+10")
 janela.mainloop()
 # -----------------------------------------------------------------------------
 
